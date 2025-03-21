@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
 import { Navbar } from "./components/navbar/Navbar";
 import { MainContent } from "./components/maincontent/MainContent";
 import { InfoContent } from "./components/infocontent/InfoContent";

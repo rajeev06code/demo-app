@@ -1,4 +1,3 @@
-import { X } from "lucide-react";
 
 export function Navbar({ isNavOpen, setIsNavOpen }) {
   return (
