@@ -17,7 +17,7 @@ export default function Layout() {
         setIsInfoOpen={setIsInfoOpen}
       />
 
-      {isInfoOpen && <InfoContent />}
+      <InfoContent isInfoOpen={isInfoOpen} setIsInfoOpen={setIsInfoOpen} />
     </div>
   );
 }
