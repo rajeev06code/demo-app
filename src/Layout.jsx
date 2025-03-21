@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useState, lazy, Suspense } from "react";
 import { Navbar } from "./components/navbar/Navbar";
 import { MainContent } from "./components/maincontent/MainContent";
-import { InfoContent } from "./components/infocontent/InfoContent";
+const InfoPanel = lazy(() => import("./components/infocontent/InfoContent"));
 
 export default function Layout() {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -16,8 +16,9 @@ export default function Layout() {
         isInfoOpen={isInfoOpen}
         setIsInfoOpen={setIsInfoOpen}
       />
-
-      <InfoContent isInfoOpen={isInfoOpen} setIsInfoOpen={setIsInfoOpen} />
+      <Suspense fallback={<div>Loading...</div>}>
+        <InfoPanel isInfoOpen={isInfoOpen} setIsInfoOpen={setIsInfoOpen} />
+      </Suspense>
     </div>
   );
 }

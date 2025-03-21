@@ -1,4 +1,4 @@
-export function InfoContent({ isInfoOpen}) {
+export default function InfoContent({ isInfoOpen}) {
   return (
     <div
       className={`fixed inset-y-0 right-0 z-20 w-72 bg-white text-black p-6 transition-transform lg:relative lg:w-1/6 shadow-xl ${
