@@ -3,8 +3,8 @@ import { IoMdCloseCircleOutline } from "react-icons/io";
 export function Navbar({ isNavOpen, setIsNavOpen }) {
   return (
     <div
-      className={`fixed inset-y-0 left-0 z-20 w-[50%] bg-white  p-4 transition-transform lg:relative lg:w-1/6 lg:translate-x-0 lg:bg-white lg:text-black shadow-xl ${
-        isNavOpen ? "translate-x-0" : "-translate-x-full"
+      className={`fixed inset-y-0 left-0 z-20 w-[60%] bg-white p-4 transition-transform duration-300 ease-in-out lg:relative lg:w-1/6 lg:translate-x-0 lg:bg-white lg:text-black shadow-xl ${
+    isNavOpen ? "translate-x-0" : "-translate-x-full"
       }`}
     >
       <button
