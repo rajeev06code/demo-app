@@ -1,7 +1,9 @@
+import { IoMdCloseCircleOutline } from "react-icons/io";
+
 export function Navbar({ isNavOpen, setIsNavOpen }) {
   return (
     <div
-      className={`fixed inset-y-0 left-0 z-20 px-11 bg-white  p-4 transition-transform lg:relative lg:w-1/6 lg:translate-x-0 lg:bg-white lg:text-black shadow-xl ${
+      className={`fixed inset-y-0 left-0 z-20 w-[50%] bg-white  p-4 transition-transform lg:relative lg:w-1/6 lg:translate-x-0 lg:bg-white lg:text-black shadow-xl ${
         isNavOpen ? "translate-x-0" : "-translate-x-full"
       }`}
     >
@@ -9,7 +11,7 @@ export function Navbar({ isNavOpen, setIsNavOpen }) {
         className="lg:hidden absolute top-4 right-4 text-black cursor-pointer"
         onClick={() => setIsNavOpen(false)}
       >
-        X
+        <IoMdCloseCircleOutline className="text-3xl"/>
       </button>
       <h2 className="text-2xl font-bold">Navigation</h2>
       <ul className="mt-4 space-y-3">

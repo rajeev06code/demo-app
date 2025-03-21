@@ -14,17 +14,17 @@ export function MainContent({ setIsNavOpen, isInfoOpen, setIsInfoOpen }) {
         className="lg:hidden text-gray-800 mb-4"
         onClick={() => setIsNavOpen(true)}
       >
-       <IoMenuSharp className="text-4xl"/>
+       <IoMenuSharp className="w-[35px] h-[35px] p-2 text-white bg-black rounded-sm"/>
       </button>
 
-      <h1 className="text-3xl font-bold">Welcome to Dashboard</h1>
+      <h1 className="text-5xl font-bold">Welcome to Dashboard</h1>
       <p className="mt-2 text-gray-600">
         This is a responsive 3-column layout built with React.js and Tailwind CSS.
         The layout adapts seamlessly across different screen sizes while
         maintaining functionality and user experience.
       </p>
 
-      <div className="mt-6 grid grid-cols-1 lg:grid-cols-2 gap-6">
+      <div className="mt-6 mb-3 grid grid-cols-1 lg:grid-cols-2 gap-6">
         {cardData.map((card) => (
           <Card key={card.id} title={card.title} content={card.content} />
         ))}
@@ -38,6 +38,7 @@ export function MainContent({ setIsNavOpen, isInfoOpen, setIsInfoOpen }) {
       <IoIosInformationCircleOutline/>
         {isInfoOpen ? "Hide Info" : "View Info"}
       </button>
+   
     </div>
   );
 }

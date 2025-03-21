@@ -8,7 +8,7 @@ export default function Layout() {
   const [isInfoOpen, setIsInfoOpen] = useState(false);
 
   return (
-    <div className="flex h-screen">
+    <div className="flex lg:h-screen">
       <Navbar isNavOpen={isNavOpen} setIsNavOpen={setIsNavOpen} />
 
       <MainContent
